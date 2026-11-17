@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="kk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Балықшы шалдың ұлы</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b1923;color:#fff2d7;font:16px system-ui,sans-serif}main{max-width:1060px;margin:auto;padding:24px}header{display:flex;justify-content:space-between;align-items:center;gap:12px;color:#a5d9d2;font-size:.82rem;letter-spacing:.08em}h1,h2{font-family:Georgia,serif}h1{font-size:clamp(2rem,5vw,3.5rem);margin:14px 0}p{line-height:1.55}.board{position:relative;overflow:hidden;border:1px solid #466c72;border-radius:22px;background:#143643;box-shadow:0 20px 50px #0007}canvas{width:100%;display:block;aspect-ratio:16/9}.hud{display:flex;justify-content:space-between;gap:10px;background:#172f3a;padding:12px 16px;font-weight:700}.overlay{position:absolute;inset:0;display:grid;place-items:center;background:#091720a8;padding:10px;overflow:auto}.overlay[hidden]{display:none}.panel{width:min(540px,100%);padding:clamp(10px,4vw,30px);border:1px solid #ac9466;border-radius:16px;background:#102630f5;text-align:center}.panel h2{margin:0 0 8px;font-size:clamp(1.15rem,3vw,2rem)}.panel p{margin:0 0 14px}.panel button{background:#f5c87f;color:#17252b;border-color:#f5c87f}button{font:inherit;font-weight:700;cursor:pointer;border:1px solid #507881;border-radius:10px;padding:9px 16px;color:inherit;background:#203f48;touch-action:none}button:focus-visible,a:focus-visible{outline:3px solid #ffe0a2;outline-offset:3px}.controls{display:flex;gap:8px;margin:12px 0;align-items:center}.controls span{margin-left:auto;color:#abd0cd;text-align:right;font-size:.9rem}.controls button{min-width:48px}footer{color:#a9c2c7;font-size:.9rem}a{color:#f5ce8f}@media(max-width:560px){main{padding:12px}.hud{font-size:.8rem}.controls span{display:none}.panel p{font-size:.84rem;line-height:1.3}.panel button{padding:6px 12px}}
+</style>
+</head>
+<body><main>
+<header><span>ТҮРІК ХАЛЫҚ ЕРТЕГІСІ</span><button id="restart">Қайта бастау</button></header>
+<h1>Балықшы шалдың ұлы</h1>
+<div class="hud"><span id="chapter">1 / 4 · Сиқырлы балық</span><span id="count" aria-live="polite">0 / 2</span></div>
+<section class="board" aria-label="2D ойын алаңы">
+<canvas width="960" height="540" aria-label="Балықшы және жинайтын заттар орналасқан ойын алаңы"></canvas>
+<div class="overlay" id="overlay"><div class="panel"><h2 id="heading"></h2><p id="story"></p><button id="next">Ойынды бастау</button></div></div>
+</section>
+<div class="controls"><button data-key="left" aria-label="Солға">←</button><button data-key="right" aria-label="Оңға">→</button><button data-key="jump" aria-label="Секіру">↑</button><span>← → жүру · ↑ немесе бос орын — секіру</span></div>
+<p id="objective" aria-live="polite"></p>
+<footer>Мехмет Али Чыплак айтқан «Balıkçının Oğlu» ертегісінің желісімен. <a href="https://abis-files.aybu.edu.tr/avesis/4c82459d-b4cb-46cb-bbaf-25bd5a14080f" target="_blank" rel="noopener">Ертегі дереккөзі</a></footer>
+</main>
+<script src="config.js"></script>
+<script src="game.js"></script>
+</body></html>
